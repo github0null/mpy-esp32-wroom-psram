@@ -2,7 +2,7 @@ name: esp32 port
 
 on:
   push:
-  pull_request:
+    branches: [ 'v1_22_2' ]
     paths:
       - '.github/workflows/*.yml'
       - 'tools/**'
@@ -46,7 +46,7 @@ jobs:
 
     - name: Install ESP-IDF packages
       if: steps.cache_esp_idf.outputs.cache-hit != 'true'
-      run: source tools/ci.sh && ci_esp32_idf_setup
+      run: source tools/ci.sh && ci_esp32_idf_setup && patch ./esp-idf/components/esp_psram/esp32/esp_psram_impl_quad.c ./patchs/psram.patch
 
     - name: ccache
       uses: hendrikmuhs/ccache-action@v1.2
