@@ -61,4 +61,4 @@ jobs:
       with:
         name: esp32-dist-${{ matrix.ci_func }}
         path: |
-          ports/esp32
+          ports/esp32/build-ESP32_*
