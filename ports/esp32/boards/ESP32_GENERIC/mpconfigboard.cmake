@@ -32,6 +32,7 @@ if(MICROPY_BOARD_VARIANT STREQUAL "SPIRAM")
     set(SDKCONFIG_DEFAULTS
         ${SDKCONFIG_DEFAULTS}
         boards/sdkconfig.spiram
+        boards/ESP32_GENERIC/sdkconfig.unicore
     )
 
     list(APPEND MICROPY_DEF_BOARD
