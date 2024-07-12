@@ -152,7 +152,8 @@ function ci_esp32_build_cmod_spiram_s2 {
     ci_native_mpy_modules_build xtensawin
 
     make ${MAKEOPTS} -C ports/esp32 BOARD=ESP32_GENERIC BOARD_VARIANT=SPIRAM
-    make ${MAKEOPTS} -C ports/esp32 BOARD=ESP32_GENERIC_S2
+    make ${MAKEOPTS} -C ports/esp32 BOARD=ESP32_GENERIC BOARD_VARIANT=UNICORE
+    #make ${MAKEOPTS} -C ports/esp32 BOARD=ESP32_GENERIC_S2
 }
 
 function ci_esp32_build_s3_c3 {
