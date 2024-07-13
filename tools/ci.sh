@@ -133,6 +133,8 @@ function ci_esp32_idf_setup {
     # is smaller than full clones and works when the submodule commit isn't a head.
     git -C esp-idf submodule update --init --recursive --filter=tree:0
     ./esp-idf/install.sh
+    patch ./esp-idf/components/esp_psram/esp32/esp_psram_impl_quad.c ./patchs/psram.patch
+    patch ./esp-idf/components/esp_hw_support/mac_addr.c ./patchs/mac_addr.patch
 }
 
 function ci_esp32_build_common {
