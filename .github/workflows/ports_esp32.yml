@@ -12,6 +12,7 @@ on:
       - 'lib/**'
       - 'drivers/**'
       - 'ports/esp32/**'
+      - 'patchs/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
