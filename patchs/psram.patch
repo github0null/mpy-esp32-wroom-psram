@@ -1,7 +1,7 @@
-diff --git a/esp_psram_impl_quad.c b/esp_psram_impl_quad-v2.c
+diff --git a/old/esp_psram_impl_quad.c b/new/esp_psram_impl_quad.c
 index 39ac6e0..a424374 100644
---- a/esp_psram_impl_quad.c
-+++ b/esp_psram_impl_quad-v2.c
+--- a/old/esp_psram_impl_quad.c
++++ b/new/esp_psram_impl_quad.c
 @@ -859,7 +859,7 @@ esp_err_t IRAM_ATTR esp_psram_impl_enable(psram_vaddr_mode_t vaddrmode)   //psra
          }
          psram_io.psram_clk_io = PICO_V3_02_PSRAM_CLK_IO;
